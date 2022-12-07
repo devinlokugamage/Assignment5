@@ -28,7 +28,7 @@
             <a class="nav-link disabled">Disabled</a>
           </li> --}}
         </ul>
-        <button class="btn  btn-success" onclick="location.href='/login'" type="button">Login</button> 
+        <button class="btn  btn-success" onclick="location.href='/patlogin'" type="button">Login</button> 
       </div>
     </div>
   </nav>

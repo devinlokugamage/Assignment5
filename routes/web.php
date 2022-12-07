@@ -25,6 +25,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/patlogin', [App\Http\Controllers\patHomeController::class, 'index'])->name('patlogin');
 
 
 Auth::routes();
@@ -40,10 +41,18 @@ Route::post('/addAnewPatient', [App\Http\Controllers\PatientController::class,'i
 
 
 Route::get('/patients/create', 'App\Http\Controllers\PatientController@create');
+Route::get('/patients/sendmsg', 'App\Http\Controllers\sendmsgPatientController@create');
+
+
+Route::get('/patients/adddiag', 'App\Http\Controllers\adddiagPatientController@create');
 
 Route::get('/patients/view', [App\Http\Controllers\viewPatientController::class, 'show']);
 
+Route::get('/patients/viewinfo', [App\Http\Controllers\viewinfoPatientController::class, 'show']);
 
+Route::get('/patients/viewdiag', [App\Http\Controllers\viewdiagPatientController::class, 'show']);
+
+Route::get('/patients/viewmsg', [App\Http\Controllers\viewmsgPatientController::class, 'show']);
 
 Route::post('/patients', 'App\Http\Controllers\PatientController@store');
 
@@ -53,3 +62,5 @@ Route::post('/patients/view', 'App\Http\Controllers\editDeletePatientController@
 Route::get('/patients/delete/{patientId}', 'App\Http\Controllers\editDeletePatientController@delete');
 
 Route::post('/patients/showView',  [App\Http\Controllers\viewPatientController::class, 'show']);
+
+Route::post('/patients/showViewInfo',  [App\Http\Controllers\viewinfoPatientController::class, 'show']);
