@@ -21,7 +21,7 @@ class PatientController extends Controller
 
      public function create()
     {
-        return view('patients.create');
+        return view('admin.create');
     }
 
     public function store(Request $request)

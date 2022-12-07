@@ -56,7 +56,7 @@ class editDeletePatientController extends Controller
       $viewdata=Patient::orderBy('fName', 'asc')->paginate(5);
 
         
-        return view('patients.viewpatients',['patients'=>$viewdata]);
+        return view('admin.viewpatients',['patients'=>$viewdata]);
     }
 
     public function delete($patientId)
@@ -66,7 +66,7 @@ class editDeletePatientController extends Controller
          $viewdata=Patient::orderBy('fName', 'asc')->paginate(5);
 
         
-        return view('patients.viewpatients',['patients'=>$viewdata]);
+        return view('admin.viewpatients',['patients'=>$viewdata]);
        
     }
 }
