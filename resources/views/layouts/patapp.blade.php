@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'MH Staff Login System') }}</title>
+    {{-- <title>{{ config('app.name', 'MH Patient Login System') }}</title> --}}
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -67,47 +67,45 @@
                               <li class="nav-item">
                               
                                 @if (Route::is('home'))
-                                <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                                <a class="nav-link active" aria-current="page" href="/patlogin">Home</a>
 
                                 @else
-                                <a class="nav-link" aria-current="page" href="/home">Home</a>
+                                <a class="nav-link" aria-current="page" href="/patlogin">Home</a>
                                 @endif
                               </li>
-                              <li class="nav-item">
+                              {{-- <li class="nav-item">
                                 @if (Route::has('create')) 
                                 <a class="nav-link active" aria-current="page" href="/patients/create">Add New Patient</a>
                                 @else
                                 <a class="nav-link" aria-current="page" href="/patients/create">Add New Patient</a>
                         
                                 @endif
-                              </li>
+                              </li> --}}
                               <li class="nav-item">
                                 @if (Route::has('view')) 
-                                <a class="nav-link active" aria-current="page" href="/patients/view">View-Edit-Delete Patients</a>
+                                <a class="nav-link active" aria-current="page" href="/patients/viewinfo">View Patient Info</a>
                                 @else
-                                <a class="nav-link" aria-current="page" href="/patients/view">View-Edit-Delete Patients</a>
+                                <a class="nav-link" aria-current="page" href="/patients/viewinfo">View Patient Info</a>
+                        
+                                @endif
+                              </li>
+                              <li class="nav-item">
+                                @if (Route::has('Diagnosis')) 
+                                <a class="nav-link active" aria-current="page" href="/patients/viewdiag">View Diagnosis</a>
+                                @else
+                                <a class="nav-link" aria-current="page" href="/patients/viewdiag">View Diagnosis</a>
                         
                                 @endif
                               </li>
 
                               <li class="nav-item">
-                                @if (Route::has('AddDiag')) 
-                                <a class="nav-link active" aria-current="page" href="/patients/adddiag">Add Diagnosis</a>
+                                @if (Route::has('Messages')) 
+                                <a class="nav-link active" aria-current="page" href="/patients/viewmsg">View Messages</a>
                                 @else
-                                <a class="nav-link" aria-current="page" href="/patients/adddiag">Add Diagnosis</a>
+                                <a class="nav-link" aria-current="page" href="/patients/viewmsg">View Messages</a>
                         
                                 @endif
                               </li>
-
-                              <li class="nav-item">
-                                @if (Route::has('WriteMsg')) 
-                                <a class="nav-link active" aria-current="page" href="/patients/sendmsg">Send MSGs </a>
-                                @else
-                                <a class="nav-link" aria-current="page" href="/patients/sendmsg">Send MSGs</a>
-                        
-                                @endif
-                              </li>
-                              
                           
                             
                             </ul>

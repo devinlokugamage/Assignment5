@@ -16,7 +16,7 @@ class editDeletePatientController extends Controller
       
         $patient = Patient::where('ID','=',$patientId)->first();
         
-        return view('patients.editPatient',['patient'=>$patient]);
+        return view('admin.editPatient',['patient'=>$patient]);
 
     }
 

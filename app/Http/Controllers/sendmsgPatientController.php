@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Patient;
 
-class PatientController extends Controller
+class sendmsgPatientController extends Controller
 {
 
      /**
@@ -21,7 +21,7 @@ class PatientController extends Controller
 
      public function create()
     {
-        return view('admin.create');
+        return view('admin.sendmsg');
     }
 
     public function store(Request $request)
@@ -30,19 +30,14 @@ class PatientController extends Controller
    
  
 
-    $validatedData = $request->validate([
-        'fName' => 'required',
-        'lName' => 'required',
-       'gender' => 'required',
-       'dob' => 'required',
-        'address' => 'required',
-        'city' => 'required',
-        'province' => 'required',
-        'postalCode' => 'required',
-        'phoneNo' =>'required',
-        'email'=>'required',
+    // $validatedData = $request->validate([
+    //     'fName' => 'required',
+    //     'lName' => 'required',
+    //    'dob' => 'required',
+    //     'email'=>'required',
+    //     'diag'=>'required'
     
-    ]);
+    // ]);
 
     Patient::create($request->except(['_token']));
 
