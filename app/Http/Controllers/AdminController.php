@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class AdminController extends Controller
+{
+    //Index method for Admin Controller
+
+    public function indexadmin()
+    {
+        return view('patlhome');
+    }
+
+    
+}

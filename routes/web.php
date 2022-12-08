@@ -27,6 +27,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/patlogin', [App\Http\Controllers\patHomeController::class, 'index'])->name('patlogin');
 
+//Route::get('/patlogin', [App\Http\Controllers\AdminController::class, 'indexadmin'])->name('patlogin');
 
 Auth::routes();
 
@@ -39,6 +40,9 @@ Route::get('/addPatient', ['middleware' => 'auth', function() {
 Route::post('/addAnewPatient', [App\Http\Controllers\PatientController::class,'insertform']);
 
 
+// Route::get('/admin', 'AdminController@index');
+
+// Route::get('/superadmin', 'SuperAdminController@index')
 
 Route::get('/patients/create', 'App\Http\Controllers\PatientController@create');
 Route::get('/patients/sendmsg', 'App\Http\Controllers\sendmsgPatientController@create');
@@ -56,6 +60,8 @@ Route::get('/patients/viewmsg', [App\Http\Controllers\viewmsgPatientController::
 
 Route::post('/patients', 'App\Http\Controllers\PatientController@store');
 
+Route::post('/patients/adddiag', 'App\Http\Controllers\adddiagPatientController@store');
+
 Route::get('/patients/edit/{patientId}', 'App\Http\Controllers\editDeletePatientController@editPatient');
 Route::post('/patients/view', 'App\Http\Controllers\editDeletePatientController@edit');
 
@@ -64,3 +70,5 @@ Route::get('/patients/delete/{patientId}', 'App\Http\Controllers\editDeletePatie
 Route::post('/patients/showView',  [App\Http\Controllers\viewPatientController::class, 'show']);
 
 Route::post('/patients/showViewInfo',  [App\Http\Controllers\viewinfoPatientController::class, 'show']);
+
+//Route::get('/home/register', 'App\Http\Controllers\Auth\RegisterController@create');

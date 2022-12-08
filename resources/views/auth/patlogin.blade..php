@@ -5,10 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header"><center><h1>{{ __('MH Hospital Patient Login Portal') }}</h1></center></div>
+                {{-- <div class="card-header"><center><h1>{{ __('MH Patient Login  Portal') }}</h1></center></div> --}}
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('patlogin') }}">
+                    <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="row mb-3">

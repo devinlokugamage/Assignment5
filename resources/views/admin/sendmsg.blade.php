@@ -5,14 +5,7 @@
     
     <form action="/patients" method="post">
         {{ csrf_field() }}
-        {{-- <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input type="text" class="form-control" id="firstName" name="fName">
-        </div>
-        <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" id="lastName" name="lName"/>
-        </div>
+        {{-- 
         <div class="form-group">
             <label class="" for="rdGender">Gender</label>
             <div  class="form-group">
@@ -44,15 +37,27 @@
             <label for="Diag">Diagnosis</label>
             <input type="text" class="form-control" id="Diag" name="Diagnosis"/>
         </div>
-
-        
-   
+ --}}
+       <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" name="fName">
+        </div>
         <div class="form-group">
-            <label for="Doc"> Doctor</label>
-            <input type="text" class="form-control" id="Doc" name="referredDoctor"/>
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="lName"/>
         </div>
 
-        <div class="form-group"> --}}
+        <div class="form-group">
+            <label for="eMail">Email</label>
+            <input type="email" class="form-control" id="eMail" name="email" placeholder="name@example.com"/>
+        </div>
+
+        <div class="form-group">
+            <label for="Msgs"> Send Message to Patient</label>
+            <textarea rows="15" cols="50" class="form-control" id="Msgs" name="msgs"></textarea>
+        </div>
+
+        <div class="form-group"> 
 
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -68,7 +73,7 @@
         </div>
         <div class="form-group  pt-2 ">
             <center>
-        <button type="submit" class="btn btn-primary  btn-lg btn-block">Submit</button>
+        <button type="submit" class="btn btn-primary  btn-lg btn-block">Send</button>
     </center>
         </div>
         

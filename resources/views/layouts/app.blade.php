@@ -58,7 +58,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
-                            @endif  --}}
+                            @endif   --}}
                         @else
                         <img class="img-thumbnail bg-white"  src="{{asset('images/logo.svg')}}"> 
                     </a>
@@ -107,6 +107,17 @@
                         
                                 @endif
                               </li>
+                              <li class="nav-item">
+                                @if (Route::has('register'))
+                                <a class="nav-link active" aria-current="page" href="/home/register">Register Patients for Portal </a>
+                                @else
+                                <a class="nav-link" aria-current="page" href="/home/register">Register Patients for Portal</a>
+                        
+                                @endif
+                              </li>
+
+                              
+                             
                               
                           
                             
