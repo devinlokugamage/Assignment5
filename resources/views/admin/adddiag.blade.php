@@ -42,14 +42,14 @@
 
         <div class="form-group">
             <label for="Diag">Diagnosis</label>
-            <textarea rows="5" cols="33" class="form-control" id="Diag" name="diag"></textarea> 
+            <textarea rows="5" cols="33" class="form-control" id="diag" name="diag"></textarea> 
         </div>
 
         
    
         <div class="form-group">
             <label for="Doc"> Doctor</label>
-            <input type="text" class="form-control" id="refrDoc" name="referingDoctor"/>
+            <input type="text" class="form-control" id="refdoc" name="refdoc"/>
         </div>
 
         <div class="form-group">

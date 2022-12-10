@@ -107,14 +107,14 @@
                         
                                 @endif
                               </li>
-                              <li class="nav-item">
-                                @if (Route::has('register'))
-                                <a class="nav-link active" aria-current="page" href="/home/register">Register Patients for Portal </a>
+                              {{-- <li class="nav-item">
+                                @if (Route::has('register.patients'))
+                                <a class="nav-link active" aria-current="page" href="/patients/register">Register Patients for Portal </a>
                                 @else
-                                <a class="nav-link" aria-current="page" href="/home/register">Register Patients for Portal</a>
+                                <a class="nav-link" aria-current="page" href="/patients/register">Register Patients for Portal</a>
                         
                                 @endif
-                              </li>
+                              </li> --}}
 
                               
                              

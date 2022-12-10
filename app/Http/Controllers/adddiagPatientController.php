@@ -31,16 +31,16 @@ class adddiagPatientController extends Controller
    
  
 
-    //  $validatedData = $request->validate([
-    //      'fName' => 'required',
-    //      'lName' => 'required',
-    //     'dob' => 'required',
-    //      'email'=>'required',
-    //      'diag'=>'required',
-    //      'doctor'=>'required',
+      $validatedData = $request->validate([
+          'fName' => 'required',
+          'lName' => 'required',
+         'dob' => 'required',
+          'email'=>'required',
+          'diag'=>'required',
+          'refdoc'=>'required',
          
     
-    //  ]);
+     ]);
 
     Diagnosis::create($request->except(['_token']));
 

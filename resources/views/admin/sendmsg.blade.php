@@ -3,7 +3,7 @@
   <center><h1>Send Patients Messages</h1> </center>
    
     
-    <form action="/patients" method="post">
+    <form action="/patients/sendmsg" method="post">
         {{ csrf_field() }}
         {{-- 
         <div class="form-group">
@@ -54,7 +54,7 @@
 
         <div class="form-group">
             <label for="Msgs"> Send Message to Patient</label>
-            <textarea rows="15" cols="50" class="form-control" id="Msgs" name="msgs"></textarea>
+            <textarea rows="15" cols="50" class="form-control" id="msgdt" name="msgdt"></textarea>
         </div>
 
         <div class="form-group"> 
