@@ -14,6 +14,7 @@ class viewPatientController extends Controller
     {
 
         $viewdata=Patient::orderBy('fName', 'asc')->paginate(3);
+        
 
         
         return view('admin.viewpatients',['patients'=>$viewdata]);

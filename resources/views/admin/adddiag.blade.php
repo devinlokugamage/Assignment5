@@ -3,7 +3,7 @@
   <center><h1>Add Patient Diagnosis</h1> </center>
    
     
-    <form action="/patients" method="post">
+    <form action="/patients/adddiag" method="post">
         {{ csrf_field() }}
         <div class="form-group">
             <label for="firstName">First Name</label>
@@ -42,14 +42,14 @@
 
         <div class="form-group">
             <label for="Diag">Diagnosis</label>
-            <input type="text" class="form-control" id="Diag" name="Diagnosis"/>
+            <textarea rows="5" cols="33" class="form-control" id="diag" name="diag"></textarea> 
         </div>
 
         
    
         <div class="form-group">
             <label for="Doc"> Doctor</label>
-            <input type="text" class="form-control" id="Doc" name="referredDoctor"/>
+            <input type="text" class="form-control" id="refdoc" name="refdoc"/>
         </div>
 
         <div class="form-group">

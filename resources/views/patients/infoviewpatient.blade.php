@@ -1,9 +1,9 @@
 @extends("patlhome")
 @section('content_2')
-  <center><h1>View Patients</h1> </center>
+  <center><h1>View My Information</h1> </center>
 
   
-    <table  class="table table-bordered mb-5" >
+    {{-- <table  class="table table-bordered mb-5" >
         <thead>
         <tr class="table-success">
             <th scope="col">ID</th>
@@ -63,7 +63,7 @@
     </table>
      <div class="d-flex justify-content-center">
         {{$patients->links("pagination::bootstrap-4")}}
-    </div> 
+    </div>  --}}
    
   
   

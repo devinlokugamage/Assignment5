@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="description" content="">
 <meta name="Saquib" content="Blade">
-<title>MH Care 1</title>
+<title>MH Care Hospital</title>
        {{-- <!-- Scripts -->
 
        <script src="{{ asset('js/app.js') }}" defer></script>

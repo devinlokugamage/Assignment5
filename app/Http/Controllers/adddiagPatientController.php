@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Diagnosis;
 use Illuminate\Http\Request;
-use App\Models\Patient;
+//use App\Models\Diagnosis;
 
 class adddiagPatientController extends Controller
 {
@@ -30,21 +31,23 @@ class adddiagPatientController extends Controller
    
  
 
-    $validatedData = $request->validate([
-        'fName' => 'required',
-        'lName' => 'required',
-       'dob' => 'required',
-        'email'=>'required',
-        'diag'=>'required'
+      $validatedData = $request->validate([
+          'fName' => 'required',
+          'lName' => 'required',
+         'dob' => 'required',
+          'email'=>'required',
+          'diag'=>'required',
+          'refdoc'=>'required',
+         
     
-    ]);
+     ]);
 
-    Patient::create($request->except(['_token']));
+    Diagnosis::create($request->except(['_token']));
 
-      $viewdata=Patient::orderBy('fName', 'asc')->paginate(5);
+      $viewdata=Diagnosis::orderBy('fName', 'asc')->paginate(5);
 
         
-        return view('admin.viewpatients',['patients'=>$viewdata]);
+        return view('admin.adddiag',['diagnosis'=>$viewdata]);
 
 }
 }
